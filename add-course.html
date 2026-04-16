@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Course | Course Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div>
+        <h1>Add Course</h1>
+        <p>Add a new course with simple details.</p>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="my-courses.html">My Courses</a>
+        <a href="add-course.html">Add Course</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container form-section">
+      <h2>Add course form</h2>
+      <form>
+        <label for="course-name">Course name</label>
+        <input type="text" id="course-name" name="course-name" placeholder="Enter course name">
+
+        <label for="instructor">Instructor</label>
+        <input type="text" id="instructor" name="instructor" placeholder="Enter instructor name">
+
+        <label for="credits">Credits</label>
+        <input type="number" id="credits" name="credits" min="1" max="10" placeholder="Example 3">
+
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes" rows="5" placeholder="Enter course notes"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2026 Add Course page.</p>
+    </div>
+  </footer>
+</body>
+</html>
