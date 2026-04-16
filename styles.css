@@ -1,210 +1,129 @@
-:root {
-  --main-bg: #f7f4ef;
-  --nav-bg: #4d7cfe;
-  --nav-text: #ffffff;
-  --card-bg: #ffffff;
-  --border: #d9d9d9;
-  --text: #2e3840;
-  --accent: #2563eb;
-}
-
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: var(--main-bg);
-  color: var(--text);
-  line-height: 1.6;
+  font-family: Arial;
+  background-color: #f7f4ef;
+  color: black;
 }
 
 .container {
-  width: min(1100px, 90%);
-  margin: 0 auto;
+  width: 90%;
+  margin: auto;
 }
 
+/* header */
 header {
-  background-color: var(--nav-bg);
-  color: var(--nav-text);
+  background-color: white;
+  padding: 10px;
 }
 
 .header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 0;
-  flex-wrap: wrap;
+  display: block;
 }
 
-header h1,
-header p {
+header h1 {
   margin: 0;
 }
 
 nav {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 nav a {
   text-decoration: none;
-  color: var(--nav-text);
-  padding: 0.5rem 0.9rem;
-  border-radius: 6px;
-  transition: background-color 0.2s ease;
+  color: black;
+  margin-right: 10px;
+  padding: 5px;
 }
 
 nav a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #ddd;
 }
 
+/* main */
 main {
-  padding: 2rem 0;
+  padding: 20px 0;
 }
 
 .hero {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 1.5rem;
+  background-color: white;
+  border: 1px solid #968080;
+  padding: 20px;
+  margin-bottom: 15px;
 }
 
+/* info */
 .info {
-  display: grid;
-  gap: 1rem;
+  display: block;
 }
 
 .info article {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 1.2rem;
+  background-color: white;
+  border: 1px solid #968080;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-footer {
-  background-color: #eef2ff;
-  padding: 1rem 0;
-}
-
-.footer-inner {
-  text-align: center;
-}
-
-.table-section,
-.form-section,
-.contact-section {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.5rem;
+/* table */
+.table-section {
+  background-color: white;
+  border: 1px solid #968080;
+  padding: 15px;
 }
 
 table {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
+  border: 1px solid #968080;
+}
+
+th, td {
+  border: 1px solid #968080;
+  padding: 10px;
 }
 
 thead {
   background-color: #eef4ff;
 }
 
-th,
-td {
-  border: 1px solid var(--border);
-  padding: 0.9rem;
-  text-align: left;
+/* form */
+.form-section {
+  background-color: white;
+  border: 1px solid #968080;
+  padding: 15px;
+  margin-top: 15px;
 }
 
-tbody tr:hover {
-  background-color: #f2f7ff;
-}
-
-form {
-  display: grid;
-  gap: 1rem;
-}
-
-label {
-  font-weight: bold;
-}
-
-input[type="text"],
-input[type="number"],
-textarea {
+input, textarea {
   width: 100%;
-  padding: 0.8rem;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-input:focus,
-textarea:focus {
-  outline: 2px solid var(--accent);
+  padding: 5px;
+  margin-top: 5px;
+  border: 1px solid #968080;
 }
 
 button {
-  width: fit-content;
-  padding: 0.85rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  background-color: var(--accent);
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: black;
   color: white;
-  cursor: pointer;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  border: none;
 }
 
-button:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
+/* footer */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  padding: 0.4rem 0;
-}
-
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    width: 100%;
-    justify-content: space-between;
-  }
-
+/* responsive (بسيط جدا) */
+@media (max-width: 600px) {
   nav a {
-    flex: 1 1 auto;
-    text-align: center;
-  }
-
-  .info {
-    grid-template-columns: 1fr;
+    display: block;
+    margin-bottom: 5px;
   }
 }
 
-@media (max-width: 480px) {
-  .hero,
-  .table-section,
-  .form-section,
-  .contact-section {
-    padding: 1rem;
-  }
-
-  th,
-  td {
-    padding: 0.7rem;
-  }
-}
